@@ -16,6 +16,11 @@ class LoginViewController: UIViewController {
     
     let vkLogoCornerRadius: CGFloat = 10
     let wallSegueId = "showWallSegue"
+    let incorrectCredentials = "Неверное имя пользователя или пароль"
+    let emailValidationDidNotPass = "Вы ввели некорректный email"
+    let passwordValidationDidNotPass = "Вы ввели некорректный пароль"
+    let errorCaption = "Ошибка"
+    let okButtonTitle = "OK"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +36,6 @@ class LoginViewController: UIViewController {
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         
-        let incorrectCredentials = "Неверное имя пользователя или пароль"
-        let emailValidationDidNotPass = "Вы ввели некорректный email"
-        let passwordValidationDidNotPass = "Вы ввели некорректный пароль"
         
         var errorText = ""
         
@@ -56,8 +58,8 @@ class LoginViewController: UIViewController {
         
         if !errorText.isEmpty {
             
-            let alertController = UIAlertController(title: "Ошибка!", message: errorText, preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel)
+            let alertController = UIAlertController(title: errorCaption, message: errorText, preferredStyle: .alert)
+            let action = UIAlertAction(title: okButtonTitle, style: .cancel)
             
             alertController.addAction(action)
 
