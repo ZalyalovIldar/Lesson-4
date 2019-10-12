@@ -7,25 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73551C9A2350980F009D6570 /* PageHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73551C982350980F009D6570 /* PageHeaderCell.swift */; };
+		73551C9B2350980F009D6570 /* PageHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73551C992350980F009D6570 /* PageHeaderCell.xib */; };
+		73551C9F2350991D009D6570 /* TextAndImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73551C9D2350991D009D6570 /* TextAndImageCell.swift */; };
+		73551CA02350991D009D6570 /* TextAndImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73551C9E2350991D009D6570 /* TextAndImageCell.xib */; };
+		73551CA223509DA1009D6570 /* FullPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73551CA123509DA1009D6570 /* FullPostViewController.swift */; };
+		73551CA423509DD8009D6570 /* PostEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73551CA323509DD8009D6570 /* PostEditingViewController.swift */; };
+		73551CA723509E02009D6570 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73551CA623509E02009D6570 /* Post.swift */; };
+		73551CA923509E16009D6570 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73551CA823509E16009D6570 /* Delegates.swift */; };
+		73551CAB2350A05B009D6570 /* WallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73551CAA2350A05B009D6570 /* WallViewController.swift */; };
+		73551CAE2350A096009D6570 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73551CAD2350A096009D6570 /* Extensions.swift */; };
+		73551CB02350C051009D6570 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73551CAF2350C051009D6570 /* UserInfoViewController.swift */; };
+		73551CB22350C0D0009D6570 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73551CB12350C0D0009D6570 /* User.swift */; };
+		73551CB42350C31F009D6570 /* EditStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73551CB32350C31F009D6570 /* EditStatusViewController.swift */; };
+		73551CB62350C862009D6570 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73551CB52350C862009D6570 /* AuthManager.swift */; };
+		73551CB82350DBD4009D6570 /* PostProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73551CB72350DBD4009D6570 /* PostProvider.swift */; };
 		7C6202E7234E0E6500AFFEB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6202E6234E0E6500AFFEB1 /* AppDelegate.swift */; };
 		7C6202E9234E0E6500AFFEB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6202E8234E0E6500AFFEB1 /* SceneDelegate.swift */; };
-		7C6202EB234E0E6500AFFEB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6202EA234E0E6500AFFEB1 /* ViewController.swift */; };
+		7C6202EB234E0E6500AFFEB1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6202EA234E0E6500AFFEB1 /* LoginViewController.swift */; };
 		7C6202EE234E0E6500AFFEB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C6202EC234E0E6500AFFEB1 /* Main.storyboard */; };
 		7C6202F0234E0E6600AFFEB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C6202EF234E0E6600AFFEB1 /* Assets.xcassets */; };
 		7C6202F3234E0E6600AFFEB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C6202F1234E0E6600AFFEB1 /* LaunchScreen.storyboard */; };
-		7C6202FB234E17D900AFFEB1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6202FA234E17D900AFFEB1 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73551C982350980F009D6570 /* PageHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHeaderCell.swift; sourceTree = "<group>"; };
+		73551C992350980F009D6570 /* PageHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageHeaderCell.xib; sourceTree = "<group>"; };
+		73551C9D2350991D009D6570 /* TextAndImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAndImageCell.swift; sourceTree = "<group>"; };
+		73551C9E2350991D009D6570 /* TextAndImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextAndImageCell.xib; sourceTree = "<group>"; };
+		73551CA123509DA1009D6570 /* FullPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPostViewController.swift; sourceTree = "<group>"; };
+		73551CA323509DD8009D6570 /* PostEditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEditingViewController.swift; sourceTree = "<group>"; };
+		73551CA623509E02009D6570 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		73551CA823509E16009D6570 /* Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
+		73551CAA2350A05B009D6570 /* WallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallViewController.swift; sourceTree = "<group>"; };
+		73551CAD2350A096009D6570 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		73551CAF2350C051009D6570 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		73551CB12350C0D0009D6570 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		73551CB32350C31F009D6570 /* EditStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStatusViewController.swift; sourceTree = "<group>"; };
+		73551CB52350C862009D6570 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		73551CB72350DBD4009D6570 /* PostProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProvider.swift; sourceTree = "<group>"; };
 		7C6202E3234E0E6500AFFEB1 /* DynamicTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C6202E6234E0E6500AFFEB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C6202E8234E0E6500AFFEB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7C6202EA234E0E6500AFFEB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7C6202EA234E0E6500AFFEB1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C6202ED234E0E6500AFFEB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C6202EF234E0E6600AFFEB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C6202F2234E0E6600AFFEB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C6202F4234E0E6600AFFEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C6202FA234E17D900AFFEB1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +67,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73551C952350979F009D6570 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73551C9C235098FC009D6570 /* TextAndImageCell */,
+				73551C97235097CF009D6570 /* PageHeaderCell */,
+				7C6202EA234E0E6500AFFEB1 /* LoginViewController.swift */,
+				73551CA123509DA1009D6570 /* FullPostViewController.swift */,
+				73551CA323509DD8009D6570 /* PostEditingViewController.swift */,
+				73551CAA2350A05B009D6570 /* WallViewController.swift */,
+				73551CAF2350C051009D6570 /* UserInfoViewController.swift */,
+				73551CB32350C31F009D6570 /* EditStatusViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		73551C97235097CF009D6570 /* PageHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				73551C982350980F009D6570 /* PageHeaderCell.swift */,
+				73551C992350980F009D6570 /* PageHeaderCell.xib */,
+			);
+			path = PageHeaderCell;
+			sourceTree = "<group>";
+		};
+		73551C9C235098FC009D6570 /* TextAndImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				73551C9D2350991D009D6570 /* TextAndImageCell.swift */,
+				73551C9E2350991D009D6570 /* TextAndImageCell.xib */,
+			);
+			path = TextAndImageCell;
+			sourceTree = "<group>";
+		};
+		73551CA523509DED009D6570 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				73551CA623509E02009D6570 /* Post.swift */,
+				73551CA823509E16009D6570 /* Delegates.swift */,
+				73551CB12350C0D0009D6570 /* User.swift */,
+				73551CB52350C862009D6570 /* AuthManager.swift */,
+				73551CB72350DBD4009D6570 /* PostProvider.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		73551CAC2350A082009D6570 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				73551CAD2350A096009D6570 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		7C6202DA234E0E6400AFFEB1 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +139,11 @@
 		7C6202E5234E0E6500AFFEB1 /* DynamicTable */ = {
 			isa = PBXGroup;
 			children = (
+				73551CAC2350A082009D6570 /* Helpers */,
+				73551CA523509DED009D6570 /* Model */,
+				73551C952350979F009D6570 /* View */,
 				7C6202E6234E0E6500AFFEB1 /* AppDelegate.swift */,
 				7C6202E8234E0E6500AFFEB1 /* SceneDelegate.swift */,
-				7C6202FA234E17D900AFFEB1 /* CustomTableViewCell.swift */,
-				7C6202EA234E0E6500AFFEB1 /* ViewController.swift */,
 				7C6202EC234E0E6500AFFEB1 /* Main.storyboard */,
 				7C6202EF234E0E6600AFFEB1 /* Assets.xcassets */,
 				7C6202F1234E0E6600AFFEB1 /* LaunchScreen.storyboard */,
@@ -129,7 +211,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C6202F3234E0E6600AFFEB1 /* LaunchScreen.storyboard in Resources */,
+				73551C9B2350980F009D6570 /* PageHeaderCell.xib in Resources */,
 				7C6202F0234E0E6600AFFEB1 /* Assets.xcassets in Resources */,
+				73551CA02350991D009D6570 /* TextAndImageCell.xib in Resources */,
 				7C6202EE234E0E6500AFFEB1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,9 +225,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C6202EB234E0E6500AFFEB1 /* ViewController.swift in Sources */,
+				73551CB22350C0D0009D6570 /* User.swift in Sources */,
+				73551C9F2350991D009D6570 /* TextAndImageCell.swift in Sources */,
+				73551CB02350C051009D6570 /* UserInfoViewController.swift in Sources */,
+				73551CA423509DD8009D6570 /* PostEditingViewController.swift in Sources */,
+				73551CB62350C862009D6570 /* AuthManager.swift in Sources */,
+				7C6202EB234E0E6500AFFEB1 /* LoginViewController.swift in Sources */,
+				73551CA723509E02009D6570 /* Post.swift in Sources */,
+				73551CB42350C31F009D6570 /* EditStatusViewController.swift in Sources */,
+				73551C9A2350980F009D6570 /* PageHeaderCell.swift in Sources */,
+				73551CA223509DA1009D6570 /* FullPostViewController.swift in Sources */,
+				73551CAB2350A05B009D6570 /* WallViewController.swift in Sources */,
 				7C6202E7234E0E6500AFFEB1 /* AppDelegate.swift in Sources */,
-				7C6202FB234E17D900AFFEB1 /* CustomTableViewCell.swift in Sources */,
+				73551CA923509E16009D6570 /* Delegates.swift in Sources */,
+				73551CAE2350A096009D6570 /* Extensions.swift in Sources */,
+				73551CB82350DBD4009D6570 /* PostProvider.swift in Sources */,
 				7C6202E9234E0E6500AFFEB1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
