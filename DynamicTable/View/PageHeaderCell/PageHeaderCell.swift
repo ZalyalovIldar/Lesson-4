@@ -20,6 +20,7 @@ class PageHeaderCell: UITableViewCell {
     var user: User!
     
     func configure(with user: User, delegate: PageHeaderButtonDelegate) {
+        
         self.delegate = delegate
         self.user = user
         

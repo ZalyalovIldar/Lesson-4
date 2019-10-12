@@ -76,8 +76,10 @@ extension String {
     
     func isValidPassword() -> Bool {
         
+        let minimumLength = 6
+        
         let regex = try! NSRegularExpression(pattern: "([a-zA-Z]+[0-9]+[a-zA-Z]+)|([a-zA-z]+[0-9]+)|([0-9]+[a-zA-Z]+)")
         
-        return self.count >= 6 && regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) != nil
+        return self.count >= minimumLength && regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) != nil
     }
 }
