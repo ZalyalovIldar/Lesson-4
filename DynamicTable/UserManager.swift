@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User {
+struct User: Codable {
     
     var email: String
     var password: String
@@ -43,7 +43,7 @@ struct User {
     }
 }
 
-struct Post {
+struct Post: Codable {
     
     static var counter = 0
     var text: String?
@@ -97,4 +97,6 @@ class UserManager {
         let passwordTest = NSPredicate(format: predicateFormat, passwordRegEx)
         return passwordTest.evaluate(with: password)
     }
+    
+    
 }

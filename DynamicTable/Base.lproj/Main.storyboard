@@ -347,7 +347,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="gxU-cg-KTt">
                         <barButtonItem key="backBarButtonItem" title="                  " id="S32-mZ-SHT"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="grA-GX-Gce">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="snp-Gh-5Y3">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="snp-Gh-5Y3">
                                 <rect key="frame" x="300" y="7" width="94" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="            Выход">
@@ -831,7 +831,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="pJc-eX-hHq">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Yde-F4-FyG">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aMv-EQ-i1P">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aMv-EQ-i1P">
                                 <rect key="frame" x="289" y="7" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="       Сохранить">
@@ -911,6 +911,7 @@
                         <outlet property="emailTextField" destination="Ge7-oh-Ocs" id="8G8-7S-bHB"/>
                         <outlet property="passwordTextField" destination="7qn-Uh-RVh" id="jI9-d4-dNd"/>
                         <segue destination="DMv-1U-tH6" kind="show" identifier="toProfile" id="CCn-ZF-nOT"/>
+                        <segue destination="DMv-1U-tH6" kind="show" identifier="loggedUserToProfileSegue" animates="NO" id="bvQ-Na-4jz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNc-0g-7lR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1030,7 +1031,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="s4k-iN-Ea0">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Mcu-yl-sXP">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="smT-MU-48N">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="smT-MU-48N">
                                 <rect key="frame" x="277" y="7" width="117" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="          Сохранить">
@@ -1054,4 +1055,7 @@
             <point key="canvasLocation" x="4393" y="356"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bvQ-Na-4jz"/>
+    </inferredMetricsTieBreakers>
 </document>

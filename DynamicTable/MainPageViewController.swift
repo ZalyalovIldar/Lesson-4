@@ -21,6 +21,7 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     let customCellIdentifier = "reusableCustomCell"
     let postDetailSegueIdentifier = "postDetailSegue"
     let toDetailProfileSegueIdentifier = "toDetailProfile"
+    let userUserDefaultsIdentifier = "user"
     let estimatedRowHeight: CGFloat = 100
     
     var user: User!
@@ -102,6 +103,7 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
             user.posts.remove(at: postValue.offset)
             user.posts.insert(post, at: postValue.offset)
             profileWallTableView.reloadData()
+            saveData()
         }
     }
     
@@ -110,15 +112,26 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
             
             user.posts.remove(at: postValue.offset)
             profileWallTableView.reloadData()
+            saveData()
         }
     }
     
     @IBAction func quitButtonPressed(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: userUserDefaultsIdentifier)
+        UserDefaults.standard.synchronize()
         self.navigationController?.popViewController(animated: true)
     }
     
     func updateUser(user: User) {
         self.user = user
+        saveData()
+    }
+    
+    func saveData() {
+        
+        if let encoded = try? JSONEncoder().encode(user) {
+            UserDefaults.standard.set(encoded, forKey: userUserDefaultsIdentifier)
+        }
     }
 }
 
