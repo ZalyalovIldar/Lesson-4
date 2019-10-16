@@ -151,6 +151,7 @@ class UserInfoViewController: UIViewController, UserEditDelegate {
         
         ensureCorrectStatus()
     }
+    
     @IBAction func editStatusButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: editStatusSegueIdentifier, sender: self)
     }
