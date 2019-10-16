@@ -63,9 +63,9 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     
     func loginError() {
         
-        let alert = UIAlertController(title: "Ошибка", message: "Данные введены неверно, попробуйте снова", preferredStyle: .actionSheet)
-        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
-        alert.addAction(cancelAction)
+        let alert = UIAlertController(title: "Ошибка", message: "Данные введены неверно, попробуйте снова", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
 }
