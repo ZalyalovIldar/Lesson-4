@@ -9,10 +9,8 @@
 import Foundation
 
 struct Post {
-    
-    static var postCount = 0
-    
-    let id: Int
+        
+    let id: String
     let text: String?
     let imageName: String?
     
@@ -20,7 +18,6 @@ struct Post {
         
         self.text = text
         self.imageName = imageName
-        id = Post.postCount
-        Post.postCount += 1
+        id = UUID().uuidString
     }
 }
