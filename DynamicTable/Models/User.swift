@@ -44,21 +44,4 @@ struct User {
     let secondCompanyName: String
     let secondCompanyInfo: String
     let secondCompanyPosition: String
-    
-}
-
-struct Post {
-    
-    var postId = 0
-    var text: String?
-    var image: UIImage?
-    var time: String?
-    
-    init(text: String, image: UIImage?, time: String) {
-        self.text = text
-        self.image = image
-        self.time = time
-        
-        postId += 1
-    }
 }

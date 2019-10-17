@@ -15,7 +15,7 @@ class EditViewController: UIViewController {
     var post: Post!
     var text: String?
     
-    weak var postEditDelegate: PostEditDelegate?
+    weak var postEditDelegate: EditPostDelegate?
     
     override func viewWillAppear(_ animated: Bool) {
         

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FullPostViewController: UIViewController, PostEditDelegate {
+class FullPostViewController: UIViewController, EditPostDelegate {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,11 +21,11 @@ class FullPostViewController: UIViewController, PostEditDelegate {
     
     @IBOutlet weak var contentView: UIView!
     
+    weak var postDeleteDelegate: DeletePostDelegate?
+    weak var postEditDelegate: EditPostDelegate?
+    
     var post: Post!
     var user: User!
-    
-    weak var postDeleteDelegate: PostDeleteDelegate?
-    weak var postEditDelegate: PostEditDelegate?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -82,7 +82,7 @@ class FullPostViewController: UIViewController, PostEditDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == Constants.editPostSegue {
+        if segue.identifier == Constants.editPostSegueId {
             
             let destVC = segue.destination as! EditViewController
             
@@ -97,7 +97,7 @@ class FullPostViewController: UIViewController, PostEditDelegate {
         
         let editAction = UIAlertAction(title: "Редактировать", style: .default) { [weak self] editAction in
             
-            self?.performSegue(withIdentifier: Constants.editPostSegue, sender: self)
+            self?.performSegue(withIdentifier: Constants.editPostSegueId, sender: self)
         }
         
         let deleteAction = UIAlertAction(title: "Удалить", style: .destructive) { deleteAction in

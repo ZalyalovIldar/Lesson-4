@@ -13,7 +13,7 @@ class NewStatusViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var statusTextView: UITextView!
     
     var user: User!
-    weak var delegate: StatusEditDelegate!
+    weak var delegate: EditStatusDelegate!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

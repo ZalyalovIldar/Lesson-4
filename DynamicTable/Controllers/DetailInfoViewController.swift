@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailInfoViewController: UIViewController, StatusEditDelegate {    
+class DetailInfoViewController: UIViewController, EditStatusDelegate {
 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -39,16 +39,20 @@ class DetailInfoViewController: UIViewController, StatusEditDelegate {
     @IBOutlet var giftImageViews: [UIImageView]!
     
     var user: User!
-
-
-    override func viewDidLoad() {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        super.viewDidLoad()
+        configureUI()
+        checkStatus()
+    }
+    
+    func configureUI() {
         
         profileImageView.layer.cornerRadius = profileImageView.bounds.height/2
         
         title = user.name
-
+        
         profileImageView.image = UIImage(named: user.photo)
         nameLabel.text = user.name
         ageAndCityLabel.text = "\(user.age) лет, \(user.city)"
@@ -77,13 +81,6 @@ class DetailInfoViewController: UIViewController, StatusEditDelegate {
             giftImageView.element.image = UIImage(named: "gift\(giftImageView.offset + 1)")
         }
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        
-        super.viewWillAppear(animated)
-        
-        checkStatus()
-    }
     
     func statusUpdated(with text: String) {
         user.status = text
@@ -101,7 +98,7 @@ class DetailInfoViewController: UIViewController, StatusEditDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if segue.identifier == Constants.editStatusSegue {
+        if segue.identifier == Constants.editStatusSegueId {
             let destVC = segue.destination as! NewStatusViewController
             destVC.user = user
             destVC.delegate = self
@@ -109,6 +106,6 @@ class DetailInfoViewController: UIViewController, StatusEditDelegate {
     }
     
     @IBAction func editStatusButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: Constants.editStatusSegue, sender: self)
+        performSegue(withIdentifier: Constants.editStatusSegueId, sender: self)
     }
 }

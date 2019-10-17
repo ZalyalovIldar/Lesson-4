@@ -6,24 +6,26 @@
 //  Copyright © 2019 Ildar Zalyalov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-protocol PostDeleteDelegate: AnyObject {
-    
+protocol DeletePostDelegate: AnyObject {
     func deleteButtonPressed(on post: Post)
 }
 
-protocol PostEditDelegate: AnyObject {
-    
+protocol EditPostDelegate: AnyObject {
     func doneButtonPressed(on post: Post)
 }
 
-protocol PageHeaderButtonDelegate: AnyObject {
-    
+protocol InfoButtonDelegate: AnyObject {
     func pageInfoButtonPressed()
 }
 
-protocol StatusEditDelegate: AnyObject {
+protocol EditStatusDelegate: AnyObject {
     func statusUpdated(with text: String)
 }
 
+protocol CustomCell {
+    
+    static func cellNibName() -> UINib?
+    static func cellIdentifier() -> String
+}

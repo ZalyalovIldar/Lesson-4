@@ -21,13 +21,8 @@ class InfoCell: UITableViewCell, CustomCell {
     @IBOutlet weak var whatsNewProfileImage: UIImageView!
     
     var model: User!
-    weak var delegate: PageHeaderButtonDelegate?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
+    weak var delegate: InfoButtonDelegate?
+
     func configure(with model: User) {
         
         profileImageView.image = UIImage(named: model.photo)
