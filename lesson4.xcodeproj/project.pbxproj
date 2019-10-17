@@ -23,10 +23,11 @@
 		4250259F2350FF6000E5E690 /* DetailedPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425025932350FF6000E5E690 /* DetailedPostTableViewController.swift */; };
 		425025A02350FF6000E5E690 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425025942350FF6000E5E690 /* PostsTableViewController.swift */; };
 		425025A22350FF9100E5E690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425025A12350FF9100E5E690 /* Assets.xcassets */; };
-		427E4DF72358FFEB0095C7B8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427E4DF52358FFEB0095C7B8 /* Realm.framework */; };
-		427E4DF82358FFEB0095C7B8 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 427E4DF52358FFEB0095C7B8 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		427E4DF92358FFEB0095C7B8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427E4DF62358FFEB0095C7B8 /* RealmSwift.framework */; };
-		427E4DFA2358FFEB0095C7B8 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 427E4DF62358FFEB0095C7B8 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		427E4DFF235900ED0095C7B8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427E4DFD235900ED0095C7B8 /* Realm.framework */; };
+		427E4E00235900ED0095C7B8 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 427E4DFD235900ED0095C7B8 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		427E4E01235900ED0095C7B8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427E4DFE235900ED0095C7B8 /* RealmSwift.framework */; };
+		427E4E02235900ED0095C7B8 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 427E4DFE235900ED0095C7B8 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		427E4E052359031B0095C7B8 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E4E042359031B0095C7B8 /* Helper.swift */; };
 		4285EE3D2356571E00B56330 /* keyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285EE3C2356571E00B56330 /* keyboardExtension.swift */; };
 		4292862323513EFF00A85DDE /* appExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292862223513EFE00A85DDE /* appExtension.swift */; };
 		429EB69623549EFC00A114CA /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429EB69523549EFC00A114CA /* Generator.swift */; };
@@ -43,14 +44,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		427E4DFB2358FFEC0095C7B8 /* Embed Frameworks */ = {
+		427E4E03235900ED0095C7B8 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				427E4DFA2358FFEB0095C7B8 /* RealmSwift.framework in Embed Frameworks */,
-				427E4DF82358FFEB0095C7B8 /* Realm.framework in Embed Frameworks */,
+				427E4E02235900ED0095C7B8 /* RealmSwift.framework in Embed Frameworks */,
+				427E4E00235900ED0095C7B8 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,8 +75,9 @@
 		425025932350FF6000E5E690 /* DetailedPostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedPostTableViewController.swift; sourceTree = "<group>"; };
 		425025942350FF6000E5E690 /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		425025A12350FF9100E5E690 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		427E4DF52358FFEB0095C7B8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		427E4DF62358FFEB0095C7B8 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		427E4DFD235900ED0095C7B8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = frameworks/Realm.framework; sourceTree = "<group>"; };
+		427E4DFE235900ED0095C7B8 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = frameworks/RealmSwift.framework; sourceTree = "<group>"; };
+		427E4E042359031B0095C7B8 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		4285EE3C2356571E00B56330 /* keyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardExtension.swift; sourceTree = "<group>"; };
 		4292862223513EFE00A85DDE /* appExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appExtension.swift; sourceTree = "<group>"; };
 		429EB69523549EFC00A114CA /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
@@ -98,8 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				427E4DF92358FFEB0095C7B8 /* RealmSwift.framework in Frameworks */,
-				427E4DF72358FFEB0095C7B8 /* Realm.framework in Frameworks */,
+				427E4E01235900ED0095C7B8 /* RealmSwift.framework in Frameworks */,
+				427E4DFF235900ED0095C7B8 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,11 +132,11 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		427E4DF42358FFEB0095C7B8 /* Frameworks */ = {
+		427E4DFC235900ED0095C7B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				427E4DF52358FFEB0095C7B8 /* Realm.framework */,
-				427E4DF62358FFEB0095C7B8 /* RealmSwift.framework */,
+				427E4DFD235900ED0095C7B8 /* Realm.framework */,
+				427E4DFE235900ED0095C7B8 /* RealmSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -154,6 +156,7 @@
 				42E4A17B23511C0A00226AA9 /* Custom UI Views */,
 				4285EE3B235656FF00B56330 /* Extensions */,
 				429EB69523549EFC00A114CA /* Generator.swift */,
+				427E4E042359031B0095C7B8 /* Helper.swift */,
 			);
 			path = Heplers;
 			sourceTree = "<group>";
@@ -163,7 +166,7 @@
 			children = (
 				42D9E1E223507FE1007FE221 /* lesson4 */,
 				42D9E1E123507FE1007FE221 /* Products */,
-				427E4DF42358FFEB0095C7B8 /* Frameworks */,
+				427E4DFC235900ED0095C7B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -244,7 +247,7 @@
 				42D9E1DD23507FE1007FE221 /* Frameworks */,
 				42D9E1DE23507FE1007FE221 /* Resources */,
 				422AD47523549C62008C7030 /* ShellScript */,
-				427E4DFB2358FFEC0095C7B8 /* Embed Frameworks */,
+				427E4E03235900ED0095C7B8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,6 +344,7 @@
 				42E4A17A2351174200226AA9 /* LogInViewController.swift in Sources */,
 				425025992350FF6000E5E690 /* PhotosTableViewCell.swift in Sources */,
 				4292862323513EFF00A85DDE /* appExtension.swift in Sources */,
+				427E4E052359031B0095C7B8 /* Helper.swift in Sources */,
 				4285EE3D2356571E00B56330 /* keyboardExtension.swift in Sources */,
 				429EB69623549EFC00A114CA /* Generator.swift in Sources */,
 				42DA100F2351005000623B0F /* StatusEditingViewController.swift in Sources */,
@@ -494,6 +498,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/frameworks",
 				);
 				INFOPLIST_FILE = lesson4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -518,6 +523,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/frameworks",
 				);
 				INFOPLIST_FILE = lesson4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;

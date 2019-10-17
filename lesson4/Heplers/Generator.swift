@@ -87,7 +87,7 @@ class Generator {
             post3.image = UIImage(named: "examplePhoto8")!.jpegData(compressionQuality: 0.5)
             
             let post4 = Post()
-            post3.image = UIImage(named: "examplePhoto9")!.jpegData(compressionQuality: 0.5)
+            post4.image = UIImage(named: "examplePhoto9")!.jpegData(compressionQuality: 0.5)
             
             let posts = List<Post>()
             posts.append(post1)

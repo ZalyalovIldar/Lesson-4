@@ -13,14 +13,6 @@ class UserInfoTableViewCell: UITableViewCell {
         cellSegueDelegate.performSegue()
     }
     
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//
-//        userImage.layer.cornerRadius = userImage.frame.height / 2
-//        editProfileButton.layer.cornerRadius = editProfileButton.frame.height / 2
-//        self.selectionStyle = .none
-//    }
-//
     func setup(for user: User) {
         
         userImage.layer.cornerRadius = userImage.frame.height / 2

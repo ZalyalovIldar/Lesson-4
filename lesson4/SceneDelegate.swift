@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         isAuthorized = UserDefaults.standard.string(forKey: "lastUser")
 
         if UserDefaults.standard.string(forKey: "isFirstLaunch") == nil {
-                      
+            
             let users = Generator.generateUsers()
             try! realm.write {
                 realm.add(users)
@@ -25,32 +25,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if let userID = UserDefaults.standard.string(forKey: "lastUser") {
             
-            let userID = userID
-            let user = getUserByID(ID: userID)!
+            let user = Helper.getUserByID(ID: userID)!
             
-            let storyboard = UIStoryboard(name: "UserWall", bundle: nil)
-            let navController = storyboard.instantiateInitialViewController() as! UINavigationController
+            let navController = Helper.getUserWallNavController()
             let viewController = navController.children.first as! PostsTableViewController
+            
             viewController.user = user
             
             self.window?.rootViewController = navController
             
         } else {
             
-            let storyboard = UIStoryboard(name: "Authorization", bundle: nil)
-            let viewController = storyboard.instantiateInitialViewController() as! AuthorizationViewController
+            let viewController = Helper.getAuthorizationViewController()
             self.window?.rootViewController = viewController
         }
     }
-    
-    func getUserByID(ID: String) -> User? {
-        
-        let users = realm.objects(User.self)
-        
-        for user in users {
-            if user.userID == ID { return user }
-        }
-        return nil
-    }
 }
-
