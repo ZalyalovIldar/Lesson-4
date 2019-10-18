@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum Emails: String {
+    case email1 = "mail1@mail.ru"
+    case email2 = "mail2@mail.ru"
+    case email3 = "mail3@mail.ru"
+}
+
 class UsersProvider {
     
     private static let usersArray = [User(email: Emails.email1.rawValue,
@@ -27,8 +33,8 @@ class UsersProvider {
                                           vkId: "omeeer78",
                                           instagramName: "omeeer78",
                                           phone: "79991553468",
-                                          gifts: [UIImage(named: "gift1")!,
-                                                  UIImage(named: "gift2")!],
+                                          gifts: ["gift1",
+                                                  "gift2"],
                                           firstCompanyName: "Flatstack",
                                           firstCompanyInfo: "Казань, 2020-2022",
                                           firstCompanyPosition: "iOS Developer",
@@ -52,8 +58,8 @@ class UsersProvider {
                                           vkId: "cook60",
                                           instagramName: "cook60",
                                           phone: "79991553468",
-                                          gifts: [UIImage(named: "gift1")!,
-                                                  UIImage(named: "gift2")!],
+                                          gifts: ["gift1",
+                                                  "gift2"],
                                           firstCompanyName: "Flatstack",
                                           firstCompanyInfo: "Казань, 2010-2011",
                                           firstCompanyPosition: "iOS Developer",
@@ -77,9 +83,9 @@ class UsersProvider {
                                           vkId: "fkirkorov",
                                           instagramName: "fkirkorov",
                                           phone: "79991553469",
-                                          gifts: [UIImage(named: "gift1")!,
-                                                  UIImage(named: "gift2")!,
-                                                  UIImage(named: "gift3")!],
+                                          gifts: ["gift1",
+                                                  "gift2",
+                                                  "gift3"],
                                           firstCompanyName: "Болгарская консерватория",
                                           firstCompanyInfo: "Болгария, 2010-2011",
                                           firstCompanyPosition: "Певец",
@@ -91,9 +97,18 @@ class UsersProvider {
         
         for user in usersArray {
             if user.email == email && user.password == password {
+                
+                UserDefaults.standard.set(try? JSONEncoder().encode(user), forKey: "user")
+                
                 return user
             }
         }
         return nil
+    }
+    
+    static func getAuthorizedUser() -> User? {
+        guard let userData = UserDefaults.standard.data(forKey: "user") else { return nil }
+        let user = try? JSONDecoder().decode(User.self, from: userData)
+        return user
     }
 }

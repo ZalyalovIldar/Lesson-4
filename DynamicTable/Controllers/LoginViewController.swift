@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     
     var textFields: [UITextField] = []
     
-    var userModel: User!
+//    var userModel: User!
     
     let attributes = [NSAttributedString.Key.foregroundColor: UIColor.lightGray,
                       NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 17)!]
@@ -72,29 +72,25 @@ class LoginViewController: UIViewController {
         
         guard let email = loginTextField.text, let password = passwordTextField.text else { return }
         
-        if  !DataValidator.validateEmail(email: email) {
-            if  DataValidator.validatePassword(with: password) {
+        if DataValidator.validateEmail(email: email) {
+            if  !DataValidator.validatePassword(with: password) {
                 showWarningAlert(message: "Пароль должен состоять из букв и цифр и содержать минимум 6 символов")
                 return
             }
+        } else {
             showWarningAlert(message: "Email не найден")
             return
-        } else {
-            let user = UsersProvider.auth(email: email, password: password)
-            userModel = user
+        }
+        
+        if DataValidator.validateEmail(email: email) &&  DataValidator.validatePassword(with: password) {
+            guard let _ = UsersProvider.auth(email: email, password: password) else  {
+                showWarningAlert(message: "Пользователь не найден")
+                return
+            }
             performSegue(withIdentifier: Constants.loginSegueId, sender: self)
         }
         
         loginTextField.text = nil
         passwordTextField.text = nil
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        if segue.identifier == Constants.loginSegueId, let destVC = segue.destination as? MainPageController {
-
-            destVC.user = userModel
-            destVC.posts = PostsProvider.getPosts(for: userModel)
-        }
     }
 }

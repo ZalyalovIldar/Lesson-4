@@ -10,16 +10,28 @@ import UIKit
 
 class MainPageController: UIViewController, InfoButtonDelegate, EditPostDelegate, DeletePostDelegate {
     
+    //MARK: - Properties & Outlets
+    
     @IBOutlet weak var tableView: UITableView!
     
     var user: User!
-    var posts: [Post]!
+    var posts: [Post] = [Post]()
+    
+    //MARK: - View configuring
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         tableView.register(InfoCell.cellNibName(), forCellReuseIdentifier: InfoCell.cellIdentifier())
         tableView.register(PostCell.cellNibName(), forCellReuseIdentifier: PostCell.cellIdentifier())
+        
+        getUser()
+    }
+    
+    func getUser() {
+        guard let authorizedUser = UsersProvider.getAuthorizedUser() else { return }
+            user = authorizedUser
+            posts = PostsProvider.getPosts(for: user)
     }
     
     // MARK: - Navigation
@@ -47,6 +59,8 @@ class MainPageController: UIViewController, InfoButtonDelegate, EditPostDelegate
         }
     }
     
+    //MARK: - Delegates
+    
     func doneButtonPressed(on post: Post) {
         if let postIndex = posts.enumerated().first(where: { $0.element.postId == post.postId }) {
             
@@ -67,9 +81,12 @@ class MainPageController: UIViewController, InfoButtonDelegate, EditPostDelegate
     }
     
     @IBAction func logoutButtonPressed(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "user")
+        print("User removed")
         performSegue(withIdentifier: Constants.logoutSegueId, sender: self)
-    
+        
     }
+    
     func pageInfoButtonPressed() {
         performSegue(withIdentifier: Constants.showUserDetailSegueId, sender: self)
     }

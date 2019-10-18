@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RQ1-KM-JZV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="HLF-nh-CJ5" customClass="LoginViewController" customModule="DynamicTable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P5y-JB-anE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="mrn-vZ-W8J">
-                                <rect key="frame" x="20" y="385" width="374" height="146"/>
+                                <rect key="frame" x="20" y="341" width="374" height="146"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="de2-ar-GQh">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="87"/>
@@ -65,7 +65,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vkLogo" translatesAutoresizingMaskIntoConstraints="NO" id="JFg-gC-YLu">
-                                <rect key="frame" x="157" y="160" width="100" height="100"/>
+                                <rect key="frame" x="157" y="116" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Dm1-dQ-Dbp"/>
                                     <constraint firstAttribute="width" constant="100" id="xPZ-9H-3NZ"/>
@@ -94,18 +94,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d45-9j-iQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="227.536231884058" y="124.55357142857142"/>
+            <point key="canvasLocation" x="70" y="125"/>
         </scene>
         <!--Амир-->
         <scene sceneID="vno-Xe-2yU">
             <objects>
-                <viewController modalTransitionStyle="partialCurl" modalPresentationStyle="fullScreen" id="CFN-Ua-O6E" customClass="MainPageController" customModule="DynamicTable" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="CFN-Ua-O6E" customClass="MainPageController" customModule="DynamicTable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rnq-BC-Mog">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="duf-wC-AKS">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.91764705879999997" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="CFN-Ua-O6E" id="yTI-Io-sMM"/>
@@ -126,6 +126,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="zT5-co-013"/>
                         <barButtonItem key="leftBarButtonItem" enabled="NO" id="4Ig-k6-ppO"/>
                         <barButtonItem key="rightBarButtonItem" title="Выйти" id="zcS-aO-NWm">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="logoutButtonPressed:" destination="CFN-Ua-O6E" id="fc5-xu-Zhd"/>
                             </connections>
@@ -145,7 +146,7 @@
         <!--Navigation Controller-->
         <scene sceneID="EVw-BD-SRV">
             <objects>
-                <navigationController id="RQ1-KM-JZV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginViewController" id="RQ1-KM-JZV" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="vAq-kY-3Hb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -165,18 +166,40 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7TW-6f-nkI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-591" y="125"/>
+            <point key="canvasLocation" x="-822" y="125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rzR-67-Nv3">
+            <objects>
+                <navigationController storyboardIdentifier="mainPageController" id="Dej-QX-659" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="ScO-G1-vCl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.37254901960784315" green="0.53725490196078429" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CFN-Ua-O6E" kind="relationship" relationship="rootViewController" id="HiC-Hd-ivI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixf-hr-kFt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="-576"/>
         </scene>
         <!--Амир-->
         <scene sceneID="k8E-oT-Hkb">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="vDf-Qq-0RR" customClass="DetailInfoViewController" customModule="DynamicTable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kfC-59-nuR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uyf-4I-QVo">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFB-cM-GJ8" userLabel="ContentView">
                                         <rect key="frame" x="1" y="0.0" width="414" height="1002.5"/>
@@ -723,7 +746,9 @@
                         <viewLayoutGuide key="safeArea" id="IuL-pB-eqX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Амир" id="T9U-9o-LSI">
-                        <barButtonItem key="backBarButtonItem" title=" " id="a22-Ru-mDM"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="a22-Ru-mDM">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="ageAndCityLabel" destination="eAj-nT-8gV" id="Akk-XU-9gB"/>
@@ -820,11 +845,11 @@
             <objects>
                 <viewController id="vZL-SN-Bro" customClass="FullPostViewController" customModule="DynamicTable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C7H-F7-mOA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAp-vN-xJ3">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C63-T7-ixk">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
@@ -1151,9 +1176,10 @@
         <image name="profileImage" width="16" height="16"/>
         <image name="share" width="24" height="24"/>
         <image name="vk" width="256" height="256"/>
-        <image name="vkLogo" width="1024" height="1024"/>
+        <image name="vkLogo" width="4266" height="4266"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="waB-ZO-5JQ"/>
+        <segue reference="HiC-Hd-ivI"/>
+        <segue reference="yLO-oJ-bRJ"/>
     </inferredMetricsTieBreakers>
 </document>

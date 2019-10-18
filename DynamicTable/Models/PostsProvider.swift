@@ -8,12 +8,6 @@
 
 import UIKit
 
-enum Emails: String {
-    case email1 = "mail1@mail.ru"
-    case email2 = "mail2@mail.ru"
-    case email3 = "mail3@mail.ru"
-}
-
 class PostsProvider {
     static func getPosts(for user: User) -> [Post] {
         

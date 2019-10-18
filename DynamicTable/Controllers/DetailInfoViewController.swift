@@ -51,7 +51,7 @@ class DetailInfoViewController: UIViewController, EditStatusDelegate {
         
         profileImageView.layer.cornerRadius = profileImageView.bounds.height/2
         
-        title = user.name
+        title = user.name.components(separatedBy: " ").first
         
         profileImageView.image = UIImage(named: user.photo)
         nameLabel.text = user.name
@@ -90,6 +90,7 @@ class DetailInfoViewController: UIViewController, EditStatusDelegate {
         
         if user.status.isEmpty {
             changeStatusLabel.text = "Изменить статус"
+            statusLabel.isHidden = true
         }
         else {
             changeStatusLabel.text = user.status

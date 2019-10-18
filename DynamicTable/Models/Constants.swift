@@ -15,5 +15,7 @@ class Constants {
     static let editStatusSegueId = "editStatus"
     static let editPostSegueId = "editPostSegue"
     static let showUserDetailSegueId = "showUserDetailInfo"
-    static let logoutSegueId = "logoutSegue"    
+    static let logoutSegueId = "logoutSegue"
+    static let mainPageControllerId = "mainPageController"
+    static let loginViewControllerId = "loginViewController"
 }

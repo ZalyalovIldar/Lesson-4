@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct User {
+struct User: Codable {
     
     let email: String
     let password: String
@@ -35,7 +35,7 @@ struct User {
     let instagramName: String
     let phone: String
     
-    let gifts: [UIImage]
+    let gifts: [String]
     
     let firstCompanyName: String
     let firstCompanyInfo: String

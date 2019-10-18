@@ -16,7 +16,7 @@
 		29471AC72354ADA000B407D1 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29471AC62354AD9F00B407D1 /* EditViewController.swift */; };
 		294947C023530C80005F89CB /* DetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294947BF23530C7F005F89CB /* DetailInfoViewController.swift */; };
 		294947C223530CAF005F89CB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294947C123530CAF005F89CB /* Protocols.swift */; };
-		294D868123583F6800CDF3E5 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294D868023583F6800CDF3E5 /* Validator.swift */; };
+		294D868123583F6800CDF3E5 /* DataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294D868023583F6800CDF3E5 /* DataValidator.swift */; };
 		294D8683235840BD00CDF3E5 /* UsersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294D8682235840BD00CDF3E5 /* UsersProvider.swift */; };
 		294D8685235844F300CDF3E5 /* PostsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294D8684235844F300CDF3E5 /* PostsProvider.swift */; };
 		294D8687235848EB00CDF3E5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294D8686235848EB00CDF3E5 /* Post.swift */; };
@@ -41,7 +41,7 @@
 		29471AC62354AD9F00B407D1 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		294947BF23530C7F005F89CB /* DetailInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInfoViewController.swift; sourceTree = "<group>"; };
 		294947C123530CAF005F89CB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		294D868023583F6800CDF3E5 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		294D868023583F6800CDF3E5 /* DataValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValidator.swift; sourceTree = "<group>"; };
 		294D8682235840BD00CDF3E5 /* UsersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersProvider.swift; sourceTree = "<group>"; };
 		294D8684235844F300CDF3E5 /* PostsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsProvider.swift; sourceTree = "<group>"; };
 		294D8686235848EB00CDF3E5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 				29471AC42354AAD200B407D1 /* Constants.swift */,
 				294D8686235848EB00CDF3E5 /* Post.swift */,
 				292903C02350F1A700798326 /* User.swift */,
-				294D868023583F6800CDF3E5 /* Validator.swift */,
+				294D868023583F6800CDF3E5 /* DataValidator.swift */,
 				294D8682235840BD00CDF3E5 /* UsersProvider.swift */,
 				294D8684235844F300CDF3E5 /* PostsProvider.swift */,
 			);
@@ -234,7 +234,7 @@
 				294947C023530C80005F89CB /* DetailInfoViewController.swift in Sources */,
 				294D8687235848EB00CDF3E5 /* Post.swift in Sources */,
 				29471AC32354AA7100B407D1 /* FullPostViewController.swift in Sources */,
-				294D868123583F6800CDF3E5 /* Validator.swift in Sources */,
+				294D868123583F6800CDF3E5 /* DataValidator.swift in Sources */,
 				7C6202EB234E0E6500AFFEB1 /* LoginViewController.swift in Sources */,
 				294947C223530CAF005F89CB /* Protocols.swift in Sources */,
 				7C6202E7234E0E6500AFFEB1 /* AppDelegate.swift in Sources */,
