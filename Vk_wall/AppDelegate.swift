@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  DynamicTable
+//  Vk_wall
 //
-//  Created by Ильдар Залялов on 09/10/2019.
-//  Copyright © 2019 Ildar Zalyalov. All rights reserved.
+//  Created by Азат Султанов on 12.10.2019.
+//  Copyright © 2019 Прокопьев Павел. All rights reserved.
 //
 
 import UIKit
