@@ -22,6 +22,7 @@ class CustomTableViewCell: UITableViewCell, CustomCell{
     
     @IBOutlet private weak var avatarImage: UIImageView!
     @IBOutlet private weak var labelOne: UILabel!
+    @IBOutlet weak var imagePost: UIImageView!
     
     weak var delegate: CustomCellDelegate?
     
@@ -31,7 +32,9 @@ class CustomTableViewCell: UITableViewCell, CustomCell{
         
         avatarImage.image = UIImage(named: post.avatar!)
         avatarImage.layer.cornerRadius = avatarImage.frame.height / 2
-        
+        if post.image != nil {
+            imagePost.image = UIImage(named: post.image!)
+        }
         self.delegate = delegate
         
     }

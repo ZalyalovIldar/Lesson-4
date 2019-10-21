@@ -81,21 +81,19 @@
                                     <constraint firstItem="xux-V8-88N" firstAttribute="top" secondItem="scL-JQ-CsX" secondAttribute="bottom" constant="17" id="zx5-Sq-Tgi"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rYf-dn-dOe">
-                                <rect key="frame" x="0.0" y="194" width="414" height="100"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rYf-dn-dOe">
+                                <rect key="frame" x="0.0" y="194" width="414" height="702"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="li7-Th-drR"/>
-                                </constraints>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rYf-dn-dOe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Doq-0f-ajg"/>
-                            <constraint firstItem="rYf-dn-dOe" firstAttribute="top" secondItem="C1j-TY-XZL" secondAttribute="bottom" constant="10" id="L6O-PJ-WUS"/>
+                            <constraint firstItem="rYf-dn-dOe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Bu8-p9-Kpr"/>
                             <constraint firstItem="C1j-TY-XZL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LQs-z5-Pv8"/>
-                            <constraint firstItem="rYf-dn-dOe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QGt-IM-ocy"/>
+                            <constraint firstItem="rYf-dn-dOe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lfy-Zh-NRb"/>
+                            <constraint firstAttribute="bottom" secondItem="rYf-dn-dOe" secondAttribute="bottom" id="WpG-xA-fgN"/>
                             <constraint firstItem="C1j-TY-XZL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xmx-hg-tyJ"/>
+                            <constraint firstItem="rYf-dn-dOe" firstAttribute="top" secondItem="C1j-TY-XZL" secondAttribute="bottom" constant="10" id="Y4S-si-GHp"/>
                             <constraint firstItem="C1j-TY-XZL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="b8D-nP-pHn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

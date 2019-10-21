@@ -40,7 +40,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
      Настройка tableView
      */
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        if account.posts[indexPath.row].image != nil {
+            return 400
+        }
+        else {
+            return 200
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
