@@ -32,7 +32,7 @@ class AuthManager {
             
             if user.email == email && user.password == password {
                 
-                UserDefaults.standard.set(try! JSONEncoder().encode(user), forKey: "authenticatedUser")
+                UserDefaults.standard.set(try! JSONEncoder().encode(user), forKey: userKey)
                 
                 return user
             }
