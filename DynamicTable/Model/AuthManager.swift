@@ -10,6 +10,8 @@ import Foundation
 
 class AuthManager {
     
+    private static let userKey = "authenticatedUser"
+    
     private class var database: [User] {
         
         get {
@@ -41,7 +43,7 @@ class AuthManager {
     
     class func currentUser() -> User? {
         
-        if let data = UserDefaults.standard.data(forKey: "authenticatedUser") {
+        if let data = UserDefaults.standard.data(forKey: userKey) {
             return try! JSONDecoder().decode(User.self, from: data)
         }
         else {
@@ -50,7 +52,7 @@ class AuthManager {
     }
     
     class func logout() {
-        UserDefaults.standard.removeObject(forKey: "authenticatedUser")
+        UserDefaults.standard.removeObject(forKey: userKey)
     }
 }
  
