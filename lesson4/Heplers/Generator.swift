@@ -1,6 +1,5 @@
 import Foundation
 import UIKit
-import RealmSwift
 
 class Generator {
     
@@ -8,6 +7,7 @@ class Generator {
         
         let user1: User = {
             let user = User()
+            user.userID = "1"
             user.login = "qwerty1@gmail.com"
             user.password = "qwerty1"
             user.birthDay = "8 July 2000"
@@ -25,9 +25,7 @@ class Generator {
             post2.image = UIImage(named: "examplePhoto2")!.jpegData(compressionQuality: 0.5)
             post2.text = "Elon Musk"
             
-            let posts = List<Post>()
-            posts.append(post1)
-            posts.append(post2)
+            let posts: [Post] = [post1, post2]
             
             user.posts = posts
             
@@ -36,6 +34,7 @@ class Generator {
         
         let user2: User = {
             let user = User()
+            user.userID = "2"
             user.login = "qwerty2@gmail.com"
             user.password = "qwerty2"
             user.birthDay = "10 may 1995"
@@ -56,10 +55,7 @@ class Generator {
             post3.image = UIImage(named: "examplePhoto7")!.jpegData(compressionQuality: 0.5)
             post3.text = ""
             
-            let posts = List<Post>()
-            posts.append(post1)
-            posts.append(post2)
-            posts.append(post3)
+            let posts: [Post] = [post1, post2, post3]
             
             user.posts = posts
             
@@ -68,6 +64,7 @@ class Generator {
         
         let user3: User = {
             let user = User()
+            user.userID = "3"
             user.login = "qwerty3@gmail.com"
             user.password = "qwerty3"
             user.birthDay = "28 jan 2002"
@@ -89,11 +86,7 @@ class Generator {
             let post4 = Post()
             post4.image = UIImage(named: "examplePhoto9")!.jpegData(compressionQuality: 0.5)
             
-            let posts = List<Post>()
-            posts.append(post1)
-            posts.append(post2)
-            posts.append(post3)
-            posts.append(post4)
+            let posts: [Post] = [post1, post2, post3, post4]
             
             user.posts = posts
             

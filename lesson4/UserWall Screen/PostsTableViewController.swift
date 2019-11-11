@@ -1,11 +1,9 @@
 import UIKit
-import RealmSwift
 
 class PostsTableViewController: UITableViewController {
     
     public var user: User!
-    public var posts = List<Post>()
-    private let realm = try! Realm()
+    public var posts: [Post]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +16,6 @@ class PostsTableViewController: UITableViewController {
     @IBAction func logoutButtonPressed(_ sender: Any) {
         
         UserDefaults.standard.set(nil, forKey: "lastUser")
-        UserDefaults.standard.set(false, forKey: "isAuthorized")
         
         let storyBoard = UIStoryboard(name: "Authorization", bundle: nil)
         let viewController = storyBoard.instantiateInitialViewController() as! AuthorizationViewController

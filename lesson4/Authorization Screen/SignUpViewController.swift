@@ -12,7 +12,7 @@ class SignUpViewController: UIViewController {
         let login = loginTextField.text!
         let password = passwordTextField.text!
         
-        guard Helper.checkValidation(login: login, password: password) else {
+        guard LocalDataManager.checkValidation(login: login, password: password) else {
             
             signUpButton.shake()
             Helper.presentErrorAlert(vc: self, message: "Incorrect Format")

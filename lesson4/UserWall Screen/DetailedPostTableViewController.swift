@@ -41,7 +41,7 @@ class DetailedPostTableViewController: UITableViewController {
         
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (UIAlertAction) in
             
-            Post.removePost(with: self.post.postID)
+            LocalDataManager.removePost(with: self.post.postID)
             self.navigationController?.popViewController(animated: true)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -95,7 +95,7 @@ extension DetailedPostTableViewController: dataPassingDelegate {
     func changePost(for post: Post) {
         
         self.post = post
-        Post.changePost(with: post.postID, for: post)
+        LocalDataManager.changePost(with: post.postID, for: post)
         tableView.reloadData()
     }
 }
